@@ -1,0 +1,25 @@
+<h1>Listing green_cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @green_cards.each do |green_card| %>
+      <tr>
+        <td><%= link_to 'Show', green_card %></td>
+        <td><%= link_to 'Edit', edit_green_card_path(green_card) %></td>
+        <td><%= link_to 'Destroy', green_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Green card', new_green_card_path %>

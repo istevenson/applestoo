@@ -1,0 +1,25 @@
+<h1>Listing point_totals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @point_totals.each do |point_total| %>
+      <tr>
+        <td><%= link_to 'Show', point_total %></td>
+        <td><%= link_to 'Edit', edit_point_total_path(point_total) %></td>
+        <td><%= link_to 'Destroy', point_total, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Point total', new_point_total_path %>
